@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  YYPhotoBrowserLikeWX
+//
+//  Created by yuyou on 2017/12/5.
+//  Copyright © 2017年 yy. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/**
+ *  import 头文件 - 开始
+ */
+
+#import "UIView+YYExtension.h"
+
+/**
+ *  import 头文件 - 结束
+ */
+
+
+
+/**
+ *  宏 - 开始
+ */
+
+/** 设备屏幕宽 */
+#define kMainScreenWidth  [UIScreen mainScreen].bounds.size.width
+/** 设备屏幕高度 */
+#define kMainScreenHeight [UIScreen mainScreen].bounds.size.height
+
+/** 6位十六进制颜色转换 */
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+/** 6位十六进制颜色转换，带透明度 */
+#define UIAlphaColorFromRGB(rgbValue,a) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
+
+/**
+ *  宏 - 结束
+ */
+
+#endif /* PrefixHeader_pch */
